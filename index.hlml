@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Barangay E-Health</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia', serif; /* City hall style font */
+      background: linear-gradient(135deg, #004e92, #000428);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 4em;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
+      }
+      to {
+        text-shadow: 0 0 20px #ffffff, 0 0 40px #ffcc00;
+      }
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-top: 15px;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    button {
+      margin-top: 40px;
+      padding: 15px 40px;
+      font-size: 1.3em;
+      border: none;
+      border-radius: 10px;
+      background: #ffcc00;
+      color: #333;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #ff9900;
+      transform: scale(1.1);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.9em;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Barangay E-Health</h1>
+  <p>Welcome to the official Barangay E‑Health Website. Access healthcare services online, anytime, anywhere.</p>
+  <button onclick="goToServices()">Enter Site</button>
+
+  <footer>&copy; 2026 Barangay E‑Health | Powered by Science & Technology</footer>
+
+  <script>
+    function goToServices() {
+      // Redirect to the next page
+      window.location.href = "services.html";
+    }
+  </script>
+</body>
+</html>
