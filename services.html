@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Barangay E-Health Services</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f7f9;
+      color: #333;
+    }
+
+    /* Navigation Bar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0072ff;
+      padding: 15px 40px;
+      color: white;
+      position: sticky;
+      top: 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .navbar h1 {
+      font-size: 1.5em;
+      margin: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #ffcc00;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      animation: fadeSlide 2s ease-in-out;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Services Section */
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 50px 20px;
+      gap: 30px;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      width: 280px;
+      padding: 25px;
+      text-align: center;
+      transition: transform 0.3s, background 0.3s;
+      cursor: pointer;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      background: #eaf4ff;
+    }
+
+    .service-card h2 {
+      color: #0072ff;
+      margin-bottom: 15px;
+    }
+
+    .service-card p {
+      font-size: 0.95em;
+      line-height: 1.5;
+    }
+
+    .service-card button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      background: #0072ff;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .service-card button:hover {
+      background: #005bb5;
+    }
+
+    /* Footer */
+    footer {
+      background: #0072ff;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <h1>Barangay E-Health</h1>
+    <div class="nav-links">
+      <a href="#">Consultation</a>
+      <a href="#">Health Records</a>
+      <a href="#">Appointments</a>
+      <a href="#">Education Hub</a>
+      <a href="#">Emergency Alerts</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h2>Our Services</h2>
+    <p>Welcome to Barangay E-Health! Here you can access essential health services online, designed to make healthcare more accessible, efficient, and inclusive for our community.</p>
+  </div>
+
+  <!-- Services Section -->
+  <div class="services">
+    <div class="service-card">
+      <h2>Online Consultation</h2>
+      <p>Book a virtual check-up and talk to barangay health workers without leaving your home.</p>
+      <button onclick="alert('Redirecting to Consultation...')">Start</button>
+    </div>
+
+    <div class="service-card">
+      <h2>Health Records</h2>
+      <p>Securely access your medical history and keep track of your health information.</p>
+      <button onclick="alert('Opening Health Records...')">View</button>
+    </div>
+
+    <div class="service-card">
+      <h2>Appointments</h2>
+      <p>Schedule check-ups easily and avoid long waiting lines at the health center.</p>
+      <button onclick="alert('Scheduling Appointment...')">Book</button>
+    </div>
+
+    <div class="service-card">
+      <h2>Education Hub</h2>
+      <p>Learn about nutrition, hygiene, and preventive care through articles and infographics.</p>
+      <button onclick="alert('Opening Education Hub...')">Learn</button>
+    </div>
+
+    <div class="service-card">
+      <h2>Emergency Alerts</h2>
+      <p>Stay updated with real-time alerts on outbreaks, disasters, and health advisories.</p>
+      <button onclick="alert('Viewing Emergency Alerts...')">Check</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Barangay E-Health | Powered by Science & Technology</p>
+  </footer>
+
+</body>
+  </html>
