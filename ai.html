@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Barangay E-Health AI Assistant</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .chat-container {
+      width: 100%;
+      max-width: 600px;
+      margin: 50px auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+
+    .messages {
+      height: 300px;
+      overflow-y: auto;
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      background: #fafafa;
+    }
+
+    .message {
+      margin: 8px 0;
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    .user {
+      background: #0072ff;
+      color: white;
+      text-align: right;
+    }
+
+    .ai {
+      background: #eaf4ff;
+      color: #333;
+      text-align: left;
+    }
+
+    input {
+      width: 80%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+    }
+
+    button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      background: #0072ff;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #005bb5;
+    }
+  </style>
+</head>
+<body>
+
+<div class="chat-container">
+  <h2>Barangay E-Health AI Assistant</h2>
+  <div class="messages" id="messages"></div>
+  <input type="text" id="userInput" placeholder="Type your need here...">
+  <button onclick="sendMessage()">Send</button>
+</div>
+
+<script>
+  function sendMessage() {
+    const input = document.getElementById("userInput");
+    const messageBox = document.getElementById("messages");
+
+    // User message
+    const userMsg = document.createElement("div");
+    userMsg.className = "message user";
+    userMsg.textContent = input.value;
+    messageBox.appendChild(userMsg);
+
+    // AI response logic
+    const aiMsg = document.createElement("div");
+    aiMsg.className = "message ai";
+
+    const userText = input.value.toLowerCase();
+
+    if (userText.includes("consultation")) {
+      aiMsg.textContent = "You can book an online consultation with our health worker. Please provide your preferred time.";
+    } else if (userText.includes("medicine")) {
+      aiMsg.textContent = "We can help you request medicines. Kindly specify the type of medicine you need.";
+    } else if (userText.includes("appointment")) {
+      aiMsg.textContent = "Appointments can be scheduled online. Please select a date and time.";
+    } else if (userText.includes("record")) {
+      aiMsg.textContent = "Your health records are securely stored. Would you like to access them now?";
+    } else if (userText.includes("emergency")) {
+      aiMsg.textContent = "If this is an emergency, please call your local health center immediately. We can also notify barangay officials.";
+    } else {
+      aiMsg.textContent = "I’m here to assist with consultations, medicines, appointments, records, and emergencies. How can I help you today?";
+    }
+
+    messageBox.appendChild(aiMsg);
+
+    // Clear input
+    input.value = "";
+    messageBox.scrollTop = messageBox.scrollHeight;
+  }
+</script>
+
+</body>
+</html>
